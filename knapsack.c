@@ -7,8 +7,9 @@ void merge(float ratio[], float weight[], float profit[], int low, int mid, int 
 
     // Merge two sorted halves (descending order by ratio)
     while (i <= mid && j <= high) {
-        // if (ratio[i] >= ratio[j]) {
-        if (profit[i] >= profit[j]) {
+        // if (profit[i] >= profit[j]) { // sort by profit
+        // if (weight[i] <= weight[j]) { // sort by weight
+            if (ratio[i] >= ratio[j]) { // sort by ratio
             tr[k] = ratio[i];
             tw[k] = weight[i];
             tp[k] = profit[i];
